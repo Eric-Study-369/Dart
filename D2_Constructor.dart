@@ -45,12 +45,8 @@ class Student{
     print("Defual constructor : ");
 
   }
-  Student.namedconstructor(String name, int age , int rollnumber){
-    this.name = name;
-    this.age = age;
-    this.rollNumber = rollnumber;
-  }
-}
+  Student.namedconstructor(this.name, this.age ,)
+
 
 //void
 
