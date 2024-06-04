@@ -1,4 +1,4 @@
-class Person{
+/*class Person{
   String?_firstName;
   String?_lastName;
   void diplay(){
@@ -44,6 +44,8 @@ void main(){
 }
 
 
+ */
+
 
 
 
@@ -81,14 +83,3 @@ void main() {
 }
 
  */
-
-
-
-
-
-
-
-
-
-
-
