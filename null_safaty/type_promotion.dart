@@ -5,11 +5,16 @@
 }/
  */
 
+/*void main(){
+  print("sky");
+  print("sky");
+  print("sky");
+  print("sky");
+  print("sky");
+  print("sky");
+}
+ */
+
 void main(){
-  print("sky");
-  print("sky");
-  print("sky");
-  print("sky");
-  print("sky");
-  print("sky");
+
 }
