@@ -1,34 +1,52 @@
-
-class Box<T> {
-  T value;
-
-  
-  Box(this.value);
-
-  
-  T getValue() {
-    return value;
-  }
-
-  
-  void showType() {
-    print('The type of T is: ${T.runtimeType}');
-  }
+// abstract class for object caching
+abstract class ObjectCache{
+  Object getByKey(String key);
+  void getBykey (String key , Object value);
+}
+// abstract class for String caching
+abstract class StringChache{
+  String getBykey(String key);
+  void getByKey (String key, String value);
+}
+// generic abstract class for caching
+abstract class Chche<T>{
+  T getByKey(String key);
+  void setBykey(String key, T value);
 }
 
-void main() {
-  // Create a box that stores an integer.
-  var intBox = Box<int>(123);
-  print('Value in intBox: ${intBox.getValue()}');  
-  intBox.showType();  
 
-  // Create a box that stores a string.
-  var strBox = Box<String>('Hello');
-  print('Value in strBox: ${strBox.getValue()}');  
-  strBox.showType();  
 
-  // Create a box that stores a list of integers.
-  var listBox = Box<List<int>>([1, 2, 3]);
-  print('Value in listBox: ${listBox.getValue()}');  
-  listBox.showType();  
+void main()
+{    
+    // generic using collection like : list , set , map
+    // add <typp> for (list, set)
+    // and <keytype, valuetype> for (map)
+    var names = <String> ['seth', 'kathy', 'Lars'];
+    var uniqueName = <String>{'Set', 'Kathy', 'lars'};
+    var pages = <String, int>{
+      'index.html' : 15,
+      'robots' : 45,
+      'human.txt' : 100
+    };
+
+    print(pages);
+    pages['Japan'] = 50;
+    print(pages);
+
+
+    // uisng parameterized type with constructors
+    // convert list to set
+    List<String> name = ['Alice', 'Bob', 'Charlie', 'Bob'];
+
+    var nameSet = Set<String>.from(name);
+    print(nameSet);
+
+    //generic collection type 
+    var Car = <String>[];
+    Car.addAll(['set', 'mmo', 'jso']); 
+    print(Car);
+   
+    //Restricting the parameterized type
+    
+
 }
