@@ -1,4 +1,7 @@
-
+// Lexical closures 
+Function makeAdder(int addBy){
+  return (int i ) => addBy + i;
+}
 void main(){
 
   // optional positional parameters
@@ -42,4 +45,19 @@ void main(){
   for (var item in uppercaseList){
     print('$item: ${item.length}'); // print item followed by length
   }
+
+ // call function lexical closures
+  var add2 = makeAdder(2);
+  var add4 = makeAdder(4);
+  assert(add2(3) == 5);
+  assert(add4(3) == 7);
+
+
+  // Tear-offs 
+  var charCodes =[68, 97, 114, 116];
+  var buffer = StringBuffer();
+
+  charCodes.forEach(print); // function tear-off 
+
+  charCodes.forEach(buffer.write); // method tear-off
 }
