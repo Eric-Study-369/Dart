@@ -6,7 +6,7 @@ class Candidate{
 
   Candidate(this.name, this.yearsExperience);
 }
-void main(){
+void forInLoop(){
   var candidates = [
     Candidate('Meas Ravy', 5),
     Candidate('JR', 20),
@@ -16,5 +16,13 @@ void main(){
   for (final Candidate(:name, :yearsExperience) in candidates){
     print('$name has $yearsExperience of experience.');
 
+  }
+}
+
+
+// for in loop with Map
+void forInMap(Map<String , int> person){
+  for (var entry in person.entries){
+    print('For-in Loop: ${entry.key} has value ${entry.value}');
   }
 }
