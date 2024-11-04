@@ -1,10 +1,17 @@
+import 'callable_object.dart';
 import 'class.dart';
+import 'enum.dart';
+import 'extension_method.dart';
+import 'extension_type.dart';
+import 'mixin.dart';
+import 'extend_class.dart';
 import 'redirecting_constructor.dart';
 import 'factory_constructor.dart';
 import 'redirecting_factory_constructor.dart';
 import 'tear_offs.dart';
 import 'method.dart';
-import 'extend_class.dart';
+
+
 
 void main(){ 
 
@@ -72,5 +79,49 @@ tearOff();
   appliance.start();
   //appliance.reset();
 
+
+  // calling mixin class
+  Guitarist guitarist = Guitarist();
+  guitarist.composong();
+  guitarist.tuneInstrument();
+  guitarist.perform();
+
+  print('------------------');
+
+  RockSart rockSart = RockSart();
+  rockSart.prepareStage();
+  rockSart.performOnStage();
+  rockSart.playInstrument('electric guitar');
+
+
+  //calling enum
+  enumTest();
+  
+
+  // calling extension method
+  List<int> number = [1, 2, 3 , 4];
+  print(number.doubleLength);
+  print(number);
+  print(number.split(2));  // split(2) : [[1,2]] , [[3,4]]
+
+
+  // calling extension_type
+  var tempCelsius = Temperature(25.0);
+  var tempFahrenhei = Temperature(77.0);
+
+  print(tempCelsius > Temperature(0));
+  print(tempCelsius < Temperature(30));
+
+  print(tempCelsius.toFahrenheit);
+  print(tempFahrenhei.toCelsius);
+
+
+  //calling callable_object 
+
+  var greeter = Mycallable();
+  print(greeter('Alice'));
+
+  var addFive = Adder(5);
+  print(addFive(10));
 }
 
